@@ -1,0 +1,64 @@
+/* Clients Section*/
+
+/* Logos Container */
+/* .logos {
+} */
+.logos{
+  &__list {
+    display: flex;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    align-content: center;
+    justify-content: center;
+    list-style: none;
+  }
+  &__item {
+    padding: 0;
+    margin: 0;
+    border: none;
+    border: 0;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  &__item + &__item {
+    margin-left: 30px;
+  }
+  &__link {
+    display: flex;
+    margin: 0;
+    border-radius: 4px;
+    border: 1px solid;
+    border-color: $icon-not-active;
+    width: 170px;
+    height: 92px;
+    justify-content: center;
+    align-items: center;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__link:hover,
+  &__link:focus {
+    outline: none;
+    border-radius: 4px;
+    border: 1px solid;
+    border-color: $color-accent;
+  }
+  &__link:hover .logos__icon,
+  &__link:focus .logos__icon {
+    fill: $color-accent;
+  }
+  &__icon {
+    width: 106px;
+    height: 60px;
+    fill: $icon-not-active;
+    align-self: center;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+};
+
+

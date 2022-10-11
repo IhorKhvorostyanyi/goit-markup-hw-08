@@ -1,0 +1,128 @@
+/* (Our) Works section */
+.section__works {
+  background-color: $bckg-primary;
+}
+/* Works section Container */
+.container__gallery {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.portfolio {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+
+  &__ref {
+    display: inline-block;
+    /* cursor: default; */
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__ref:hover,
+  &__ref:focus {
+    outline: none;
+
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+
+  &__item {
+    width: calc(
+      (
+          100% -
+            (
+              ($portfolio-gallery-row-count - 1) *
+                $portfolio-gallery-margin-width
+            )
+        ) / $portfolio-gallery-row-count
+    );
+
+    padding: 0;
+
+    margin-right: $portfolio-gallery-margin-width;
+    margin-bottom: $portfolio-gallery-margin-width;
+  }
+
+  &__item:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  &__item:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+  }
+
+  &__imagebox {
+    position: relative;
+    width: 100%;
+    height: 294px;
+    overflow: hidden;
+  }
+  &__imagetext {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 63px;
+    padding-bottom: 63px;
+    font-weight: 400;
+    background-color: rgba(33, 150, 243, 0.9);
+    font-size: 18px;
+    line-height: 1.5556;
+    letter-spacing: 0.03em;
+    color: #ffffff;
+
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__ref:hover &__imagetext,
+  &-ref:focus &__imagetext {
+    transform: translateY(0);
+  }
+
+  &__textbox {
+    display: block;
+    margin: 0;
+    padding-top: 20px;
+    padding-left: 23px;
+    padding-right: 23px;
+    padding-bottom: 19px;
+    border: #ececec;
+    border-style: solid;
+    border-top-width: 0;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 4px;
+    margin-left: 0;
+
+    padding: 0;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: $color-primary;
+  }
+
+  &__text {
+    margin: 0;
+    padding: 0;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.03em;
+    color: $color-secondary;
+  }
+}
