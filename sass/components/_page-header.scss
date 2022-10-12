@@ -1,7 +1,5 @@
 /* Page head section */
 .hdr {
-  background-color: $bckg-primary;
-
   /* Head section container */
   &__menu {
     display: flex;
@@ -10,11 +8,24 @@
     padding: 0 15px;
     margin: 0 auto;
     width: 1200px;
+
+    @media (max-width: 480px) {
+      max-width: 480px;
+      justify-content: space-between;
+    }
   }
 
   &__nav {
     display: flex;
     align-items: center;
+
+    @media (max-width: 480px) {
+      justify-content: space-between;
+      min-height: 60px;
+
+      //   // background-color: aquamarine;
+      //   display: block;
+    }
   }
 
   &__list {
@@ -22,6 +33,10 @@
     padding: 0;
     margin: 0;
     list-style: none;
+
+    @media (max-width: 480px) {
+      display: none;
+    }
   }
 
   &__list :visited {
@@ -78,6 +93,10 @@
     padding: 0;
     margin: 0;
     width: 333px;
+
+    @media (max-width: 480px) {
+      display: none;
+    }
   }
   &-contacts__item + &-contacts__item {
     margin-left: 30px;
@@ -159,3 +178,28 @@
     margin-right: 93px;
   }
 }
+
+.button-mobile {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  // justify-content: center;
+  // align-items: center;
+  border: none;
+  border-color: transparent;
+
+  &__icon-close {
+    display: none;
+  }
+
+  &.is-open &__icon-close {
+    display: inline-block;
+  }
+
+  &.is-open &__icon-menu {
+    display: none;
+  }
+}
+
+// @media (max-width: 480px) {
+// }
