@@ -772,17 +772,19 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
   }
 }
 @media screen and (min-width: 769px) {
   .description__list {
     display: flex;
     justify-content: center;
-    align-items: center;
   }
 }
 
+.description__item {
+  display: block;
+  box-sizing: border-box;
+}
 @media screen and (max-width: 480px) {
   .description__item {
     max-width: 450px;
@@ -939,6 +941,7 @@ body {
 @media screen and (min-width: 481px) {
   .command__list {
     display: flex;
+    flex-wrap: wrap;
   }
 }
 .command__item {
@@ -974,8 +977,7 @@ body {
 }
 @media screen and (min-width: 481px) {
   .command__image {
-    max-width: 270px;
-    max-height: 260px;
+    width: 270px;
   }
 }
 .command__textbox {

@@ -25,15 +25,17 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    // align-items: center;
   }
    @media screen and (min-width: 769px) {
     display: flex;
     justify-content: center;
-    align-items: center;
+    // align-items: center;
   }
 }
 .description__item {
+  display: block;
+  box-sizing: border-box;
   @media screen and (max-width: 480px) {
     max-width: 450px;
     min-width: 200px;

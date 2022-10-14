@@ -19,6 +19,7 @@
 
     @media screen and (min-width: 481px) {
       display: flex;
+      flex-wrap: wrap;
     }
     // display: flex;
     list-style: none;
@@ -58,8 +59,8 @@
     }
 
     @media screen and (min-width: 481px) {
-      max-width: 270px;
-      max-height: 260px;
+      width: 270px;
+      // max-height: 260px;
     }
   }
 
