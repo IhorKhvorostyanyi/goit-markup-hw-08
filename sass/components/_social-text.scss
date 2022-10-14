@@ -1,0 +1,37 @@
+.socials-text {
+  &__list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    background-origin: border-box;
+    @media screen and(min-width:481px) {
+      display: none;
+    }
+  }
+  &__item + &__item {
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left-color: rgba(33, 33, 33, 0.2);
+    border-left-width: 1px;
+    border-left-style: solid;
+  }
+  &__link {
+    display: block;
+  }
+  &__title {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: $color-secondary;
+  }
+  &__title:hover,
+  &__title:focus {
+    cursor: pointer;
+    color: $color-accent;
+  }
+}

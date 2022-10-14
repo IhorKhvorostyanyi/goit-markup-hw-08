@@ -22,16 +22,18 @@
   </head>
   <body class="body">
     <header class="hdr">
-      <div class="hdr__menu">
-        <nav class="hdr__nav">
-          <a class="logo hdr__logo" href="./index.html"
-            ><span class="logo--begin">Web</span
-            ><span class="logo--end-black">Studio</span></a
-          >
+      <!-- <div class="hdr__menu"> -->
+      <nav class="hdr__nav">
+        <a class="logo hdr__logo" href="./index.html"
+          ><span class="logo--begin">Web</span
+          ><span class="logo--end-black">Studio</span></a
+        >
+        <div class="hdr__mobile-shape">
           <button
             class="button-mobile"
             type="button"
             aria-expanded="false"
+            aria-controls="menu-container"
             data-menu-button
           >
             <svg width="40" height="40" aria-label="Кнопка мобільного меню">
@@ -45,7 +47,9 @@
               ></use>
             </svg>
           </button>
+        </div>
 
+        <div class="menu-container" id="menu-container" data-menu>
           <ul class="hdr__list">
             <li class="hdr__item">
               <a class="hdr__link hdr__link--active" href="./index.html">
@@ -63,41 +67,91 @@
               </a>
             </li>
           </ul>
-        </nav>
-        <ul class="hdr-contacts">
-          <li class="hdr-contacts__item">
-            <a
-              class="hdr-contacts__link hdr-contacts__link--email"
-              href="mailto:info@devstudio.com"
-            >
-              <svg class="hdr-contacts__icon hdr-contacts__icon--email">
-                <use href="./images/icons.svg#envelope"></use>
-              </svg>
-              <span class="hdr-contacts__title hdr-contacts__title--email">
-                info@devstudio.com
-              </span>
-            </a>
-          </li>
-          <li class="hdr-contacts__item">
-            <a
-              class="hdr-contacts__link hdr-contacts__link--phone"
-              href="tel:+380961111111"
-            >
-              <svg class="hdr-contacts__icon hdr-contacts__icon--phone">
-                <use href="./images/icons.svg#phone"></use>
-              </svg>
-              <span class="hdr-contacts__title hdr-contacts__title--phone">
-                +38 096 111 11 11
-              </span>
-            </a>
-          </li>
-        </ul>
-      </div>
+          <div class="hdr__mobile-bottom">
+            <ul class="hdr-contacts">
+              <li class="hdr-contacts__item">
+                <a
+                  class="hdr-contacts__link hdr-contacts__link--email"
+                  href="mailto:info@devstudio.com"
+                >
+                  <svg class="hdr-contacts__icon hdr-contacts__icon--email">
+                    <use href="./images/icons.svg#envelope"></use>
+                  </svg>
+                  <span class="hdr-contacts__title hdr-contacts__title--email">
+                    info@devstudio.com
+                  </span>
+                </a>
+              </li>
+              <li class="hdr-contacts__item">
+                <a
+                  class="hdr-contacts__link hdr-contacts__link--phone"
+                  href="tel:+380961111111"
+                >
+                  <svg class="hdr-contacts__icon hdr-contacts__icon--phone">
+                    <use href="./images/icons.svg#phone"></use>
+                  </svg>
+                  <span class="hdr-contacts__title hdr-contacts__title--phone">
+                    +38 096 111 11 11
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <ul class="socials-text__list">
+              <li class="socials-text__item">
+                <a
+                  class="socials-text__link"
+                  href=""
+                  target="_blank"
+                  lang="en"
+                  rel="noopener noreferrer"
+                >
+                  <span class="socials-text__title"> Instagram </span>
+                </a>
+              </li>
+              <li class="socials-text__item">
+                <a
+                  class="socials-text__link"
+                  href=""
+                  target="_blank"
+                  lang="en"
+                  rel="noopener noreferrer"
+                >
+                  <span class="socials-text__title"> Twitter </span>
+                </a>
+              </li>
+              <li class="socials-text__item">
+                <a
+                  class="socials-text__link"
+                  href=""
+                  target="_blank"
+                  lang="en"
+                  rel="noopener noreferrer"
+                >
+                  <span class="socials-text__title"> Facebook </span>
+                </a>
+              </li>
+              <li class="socials-text__item">
+                <a
+                  class="socials-text__link"
+                  href=""
+                  target="_blank"
+                  lang="en"
+                  rel="noopener noreferrer"
+                >
+                  <span class="socials-text__title"> LinkedIn </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- </div> -->
     </header>
     <main>
       <section class="section-hero hero">
         <div class="container hero__face">
           <h1 class="hero__title">Ефективні рішення для<br />вашого бізнесу</h1>
+          -->
           <button
             data-modal-open
             class="button button__hero-batton"
@@ -205,7 +259,14 @@
             <li class="command__item">
               <img
                 class="command__image"
-                src="./images/photo-product-designer-igor-demyanenko.jpg"
+                srcset="
+                ./images/command 1 (phone 1)_450_460.jpg 450w,
+                ./images/command 1 (phone 2)_900_920.jpg 900w,
+                ./images/command 1 (tablet 1)_354_374.jpg 354w,
+                ./images/command 1 (tablet 2)_708_748.jpg 708w,
+                ./images/command 1 (desktop 1)_270_260.jpg 270w,
+                ./images/command 1 (desktop 2)_540_520.jpg 540w"
+                src="./images/command 1 (phone 1)_450_460.jpg"
                 alt="photo product designer Igor Demyanenko"
               />
               <div class="command__textbox">
@@ -268,8 +329,15 @@
             </li>
             <li class="command__item">
               <img
+              srcset="
+                ./images/command 2 (phone 1)_450_460.jpg 450w,
+                ./images/command 2 (phone 2)_900_920.jpg 900w,
+                ./images/command 2 (tablet 1)_354_374.jpg 354w,
+                ./images/command 2 (tablet 2)_708_748.jpg 708w,
+                ./images/command 2 (desktop 1)_270_260.jpg 270w,
+                ./images/command 2 (desktop 2)_540_520.jpg 540w"
                 class="command__image"
-                src="./images/photo-frontend-developer-olga-repina.jpg"
+                src="./images/command 2 (phone 1)_450_460.jpg"
                 alt="photo frontend developer Olga Repina"
               />
               <div class="command__textbox">
@@ -331,8 +399,15 @@
             </li>
             <li class="command__item">
               <img
-                class="command__image"
-                src="./images/photo-marketing-mykola-tarasov.jpg"
+               srcset="
+                ./images/command 3 (phone 1)_450_460.jpg 450w,
+                ./images/command 3 (phone 2)_900_920.jpg 900w,
+                ./images/command 3 (tablet 1)_354_374.jpg 354w,
+                ./images/command 3 (tablet 2)_708_748.jpg 708w,
+                ./images/command 3 (desktop 1)_270_260.jpg 270w,
+                ./images/command 3 (desktop 2)_540_520.jpg 540w"
+               class="command__image"
+                src="./images/command 3 (phone 1)_450_460.jpg"
                 alt="photo marketing Mykola Tarasov"
               />
               <div class="command__textbox">
@@ -394,8 +469,15 @@
             </li>
             <li class="command__item">
               <img
-                class="command__image"
-                src="./images/photo-ui-designer-mykhaylo-yermakov.jpg"
+               srcset="
+                ./images/command 4 (phone 1)_450_460.jpg 450w,
+                ./images/command 4 (phone 2)_900_920.jpg 900w,
+                ./images/command 4 (tablet 1)_354_374.jpg 354w,
+                ./images/command 4 (tablet 2)_708_748.jpg 708w,
+                ./images/command 4 (desktop 1)_270_260.jpg 270w,
+                ./images/command 4 (desktop 2)_540_520.jpg 540w"
+               class="command__image"
+                src="./images/command 4 (phone 1)_450_460.jpg"
                 alt="photo ui-designer Mykhaylo Yermakov"
               />
               <div class="command__textbox">

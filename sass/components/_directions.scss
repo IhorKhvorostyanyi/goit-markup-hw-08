@@ -1,5 +1,8 @@
 /* Directions (of business) section */
 .section__directions {
+  @media screen and (max-width:480px) {
+    display: none;
+  }
   padding-top: 0;
   background-color: $bckg-primary;
 }

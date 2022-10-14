@@ -1,21 +1,38 @@
 /* Footer section */
 .ftr {
+  // display: none;
+
   background-color: $bckg-dark;
   /* Footer section container */
   &__board {
-    width: 1200px;
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 60px;
     padding-bottom: 60px;
     display: flex;
+    @media screen and (max-width: 480px) {
+      width: 450px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; 
+    }
+    @media screen and (min-width: 481px) {
+      width: 1200px;
+      
+    }
   }
   &__first-column {
     margin: 0;
     display: flex;
     flex-direction: column;
     width: 231px;
+    @media screen and (max-width: 480px) {
+      align-items: center;
+      justify-content: center;
+    }
+    @media screen and (min-width: 481px) {
+    }
   }
   &__logo {
     margin: 0;
@@ -70,17 +87,26 @@
   }
 
   &__second-column {
-    padding-top: 12px;
     padding-right: 0;
     padding-bottom: 0;
     padding-left: 0;
-    margin-top: 0;
     margin-right: 0;
     margin-bottom: 0;
-    margin-left: 70px;
     width: 206px;
     display: flex;
     flex-direction: column;
+    @media screen and (max-width: 480px) {
+      margin-top: 60px;
+      margin-left: 0;
+      align-items: center;
+      justify-content: center;
+    }
+    @media screen and (min-width: 481px) {
+      margin-top: 0;
+      padding-top: 12px;
+      margin-left: 70px;
+    }
+
   }
   &__hdr {
     margin-bottom: 20px;
@@ -110,16 +136,24 @@
   }
 
   &__third-column {
-    padding-top: 12px;
     padding-right: 0;
     padding-bottom: 0;
     padding-left: 0;
-    margin-top: 0;
     margin-right: 0;
     margin-bottom: 0;
-    margin-left: 93px;
     width: 570px;
     display: flex;
     flex-direction: column;
+    @media screen and (max-width: 480px) {
+      margin-top: 60px;
+      margin-left: 0;
+      align-items: center;
+      justify-content: center;
+    }
+    @media screen and (min-width: 481px) {
+      margin-top: 0;
+      padding-top: 12px;
+      margin-left: 93px;
+    }
   }
 }
