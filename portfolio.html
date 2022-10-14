@@ -18,16 +18,37 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body class="body">
     <header class="hdr hdr--portfolio">
-      <div class="hdr__menu">
-        <nav class="hdr__nav">
-          <a class="logo hdr__logo" href="./index.html"
-            ><span class="logo--begin">Web</span
-            ><span class="logo--end-black">Studio</span></a
+      <nav class="hdr__nav">
+        <a class="logo hdr__logo" href="./index.html"
+          ><span class="logo--begin">Web</span
+          ><span class="logo--end-black">Studio</span></a
+        >
+        <div class="hdr__mobile-shape">
+          <button
+            class="button-mobile"
+            type="button"
+            aria-expanded="false"
+            aria-controls="menu-container"
+            data-menu-button
           >
+            <svg width="40" height="40" aria-label="Кнопка мобільного меню">
+              <use
+                class="button-mobile__icon-menu"
+                href="./images/icons.svg#burger"
+              ></use>
+              <use
+                class="button-mobile__icon-close"
+                href="./images/icons.svg#close-mobile"
+              ></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="menu-container" id="menu-container" data-menu>
           <ul class="hdr__list">
             <li class="hdr__item">
               <a class="hdr__link" href="./index.html">
@@ -36,9 +57,7 @@
             </li>
             <li class="hdr__item">
               <a class="hdr__link hdr__link--active" href="./portfolio.html">
-                <span class="hdr__link hdr__link--title-active">
-                  Портфоліо</span
-                >
+                <span class="hdr__link--title-active"> Портфоліо</span>
               </a>
             </li>
             <li class="hdr__item">
@@ -47,36 +66,84 @@
               </a>
             </li>
           </ul>
-        </nav>
-        <ul class="hdr-contacts">
-          <li class="hdr-contacts__item">
-            <a
-              class="hdr-contacts__link hdr-contacts__link--email"
-              href="mailto:info@devstudio.com"
-            >
-              <svg class="hdr-contacts__icon hdr-contacts__icon--email">
-                <use href="./images/icons.svg#envelope"></use>
-              </svg>
-              <span class="hdr-contacts__title hdr-contacts__title--email">
-                info@devstudio.com
-              </span>
-            </a>
-          </li>
-          <li class="hdr-contacts__item">
-            <a
-              class="hdr-contacts__link hdr-contacts__link--phone"
-              href="tel:+380961111111"
-            >
-              <svg class="hdr-contacts__icon hdr-contacts__icon--phone">
-                <use href="./images/icons.svg#phone"></use>
-              </svg>
-              <span class="hdr-contacts__title hdr-contacts__title--phone">
-                +38 096 111 11 11
-              </span>
-            </a>
-          </li>
-        </ul>
-      </div>
+          <div class="hdr__mobile-bottom">
+            <ul class="hdr-contacts">
+              <li class="hdr-contacts__item">
+                <a
+                  class="hdr-contacts__link hdr-contacts__link--email"
+                  href="mailto:info@devstudio.com"
+                >
+                  <svg class="hdr-contacts__icon hdr-contacts__icon--email">
+                    <use href="./images/icons.svg#envelope"></use>
+                  </svg>
+                  <span class="hdr-contacts__title hdr-contacts__title--email">
+                    info@devstudio.com
+                  </span>
+                </a>
+              </li>
+              <li class="hdr-contacts__item">
+                <a
+                  class="hdr-contacts__link hdr-contacts__link--phone"
+                  href="tel:+380961111111"
+                >
+                  <svg class="hdr-contacts__icon hdr-contacts__icon--phone">
+                    <use href="./images/icons.svg#phone"></use>
+                  </svg>
+                  <span class="hdr-contacts__title hdr-contacts__title--phone">
+                    +38 096 111 11 11
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <ul class="socials-text__list">
+              <li class="socials-text__item">
+                <a
+                  class="socials-text__link"
+                  href=""
+                  target="_blank"
+                  lang="en"
+                  rel="noopener noreferrer"
+                >
+                  <span class="socials-text__title"> Instagram </span>
+                </a>
+              </li>
+              <li class="socials-text__item">
+                <a
+                  class="socials-text__link"
+                  href=""
+                  target="_blank"
+                  lang="en"
+                  rel="noopener noreferrer"
+                >
+                  <span class="socials-text__title"> Twitter </span>
+                </a>
+              </li>
+              <li class="socials-text__item">
+                <a
+                  class="socials-text__link"
+                  href=""
+                  target="_blank"
+                  lang="en"
+                  rel="noopener noreferrer"
+                >
+                  <span class="socials-text__title"> Facebook </span>
+                </a>
+              </li>
+              <li class="socials-text__item">
+                <a
+                  class="socials-text__link"
+                  href=""
+                  target="_blank"
+                  lang="en"
+                  rel="noopener noreferrer"
+                >
+                  <span class="socials-text__title"> LinkedIn </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
     <!-- <hr class="h-line" /> -->
     <main>

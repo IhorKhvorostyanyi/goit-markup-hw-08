@@ -306,6 +306,7 @@ body {
 }
 @media (min-width: 481px) {
   .hdr__list {
+    max-width: 283px;
     align-items: center;
     justify-content: space-between;
   }
@@ -481,8 +482,8 @@ body {
   .hdr-contacts__link--email {
     width: 161px;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    font-size: 12px;
+    line-height: 1.17;
     letter-spacing: 0.02em;
   }
 }
@@ -767,6 +768,14 @@ body {
   }
 }
 @media screen and (min-width: 481px) {
+  .description__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 769px) {
   .description__list {
     display: flex;
     justify-content: center;
