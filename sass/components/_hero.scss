@@ -3,14 +3,13 @@
 }
 /* Hero section */
 .hero {
-  width: 480px;
-  height: 400px;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+  text-align: center;
   background-color: $bckg-dark;
   // background-image: linear-gradient(
   //     to right,
@@ -76,6 +75,10 @@
         ),
         url("../images/hero\ \(desktop\ 2\)_3200_1200.jpg");
     }
+       width: 1600px;
+    height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
   }
 
   background-repeat: no-repeat;
@@ -89,10 +92,7 @@
   // }
 
   @media screen and(min-width:769px) {
-    width: 1600px;
-    height: 600px;
-    padding-top: 200px;
-    padding-bottom: 200px;
+ 
   }
 
   /* Hero section container */
@@ -120,10 +120,13 @@
       line-height: 1.62;
     }
     @media screen and(min-width:481px) {
+      font-size: 26px;
+      line-height: 1.62;
+    }
+   @media screen and(min-width:769px) {
       font-size: 44px;
       line-height: 1.36;
-    }
-  }
+    }  }
 }
 .button__hero-batton {
   width: 216px;

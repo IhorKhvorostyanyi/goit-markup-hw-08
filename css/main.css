@@ -306,14 +306,12 @@ body {
 }
 @media (min-width: 481px) {
   .hdr__list {
-    margin-right: 96px;
     align-items: center;
     justify-content: space-between;
   }
 }
 @media (min-width: 769px) {
   .hdr__list {
-    margin-right: 315px;
     align-items: center;
     justify-content: space-between;
   }
@@ -395,17 +393,16 @@ body {
   display: flex;
   justify-content: space-between;
   list-style: none;
+  width: 100%;
 }
 @media (max-width: 480px) {
   .hdr-contacts {
-    width: 100%;
     flex-direction: column-reverse;
     align-items: flex-start;
   }
 }
 @media (min-width: 481px) {
   .hdr-contacts {
-    width: 100%;
     flex-direction: column;
     align-items: flex-start;
   }
@@ -414,7 +411,6 @@ body {
   .hdr-contacts {
     flex-direction: row;
     align-items: center;
-    width: 333px;
   }
 }
 @media (max-width: 480px) {
@@ -634,7 +630,7 @@ body {
 }
 
 .menu-container.is-open {
-  display: flex;
+  display: inline-flex;
   background-color: white;
 }
 @media (max-width: 480px) {
@@ -666,14 +662,9 @@ body {
 
 /* Hero section */
 .hero {
-  width: 480px;
-  height: 400px;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   background-color: #2f303a;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero (phone 1)_768_400.jpg");
   background-repeat: no-repeat;
@@ -699,19 +690,15 @@ body {
 @media screen and (min-width: 769px) {
   .hero {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero (desktop 1)_1600_600.jpg");
+    width: 1600px;
+    height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
   }
 }
 @media screen and (min-width: 769px) and (min-device-pixel-ratio: 2), screen and (min-width: 769px) and (min-resolution: 192dpi), screen and (min-width: 769px) and (min-resolution: 2dppx) {
   .hero {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero (desktop 2)_3200_1200.jpg");
-  }
-}
-@media screen and (min-width: 769px) {
-  .hero {
-    width: 1600px;
-    height: 600px;
-    padding-top: 200px;
-    padding-bottom: 200px;
   }
 }
 .hero__face {
@@ -739,6 +726,12 @@ body {
   }
 }
 @media screen and (min-width: 481px) {
+  .hero__title {
+    font-size: 26px;
+    line-height: 1.62;
+  }
+}
+@media screen and (min-width: 769px) {
   .hero__title {
     font-size: 44px;
     line-height: 1.36;
