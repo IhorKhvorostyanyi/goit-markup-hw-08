@@ -20,12 +20,12 @@
   padding: 40px;
   position: absolute;
   @media screen and(max-width:768) {
-    width: 450px;
-    height: 609px;
+    max-width: 450px;
+    // height: 609px;
   }
   @media screen and(min-width:769) {
-    width: 528px;
-    height: 581px;
+    max-width: 528px;
+    // height: 581px;
   }
 
   top: 50%;
@@ -261,7 +261,7 @@
   position: relative;
 
   @media screen and(max-width:480px) {
-    width: 370px;
+    max-width: 370px;
   }
   @media screen and(min-width:481px) {
     // width: 423px;

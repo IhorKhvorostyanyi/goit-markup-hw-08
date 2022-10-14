@@ -1544,14 +1544,12 @@ body {
 }
 @media screen and (max-width: 768) {
   .modal {
-    width: 450px;
-    height: 609px;
+    max-width: 450px;
   }
 }
 @media screen and (min-width: 769) {
   .modal {
-    width: 528px;
-    height: 581px;
+    max-width: 528px;
   }
 }
 .modal__close {
@@ -1769,7 +1767,7 @@ body {
 }
 @media screen and (max-width: 480px) {
   .offer {
-    width: 370px;
+    max-width: 370px;
   }
 }
 .offer__checkbox {
