@@ -4,26 +4,23 @@
   background-color: $bckg-primary;
   padding: 0 15px;
   margin: 0 auto;
-  
+
   @media screen and (max-width: 480px) {
-      height: 60px;
-      max-width: 480px;
+    height: 60px;
+    max-width: 480px;
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  
+
   @media screen and (min-width: 481px) {
-      height: 80px;
+    height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
-    
-
   }
-
 
   &__menu {
     //justify-content: space-between;
@@ -49,24 +46,21 @@
   &__nav {
     // display: flex;
     margin: 0 auto;
-    
-    @media (max-width: 480px) {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-    }
+
+    // @media (max-width: 480px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    //}
 
     @media (min-width: 481px) {
       display: flex;
       align-items: center;
-   
-     justify-content: space-between;
-    align-items: center;
-    // max-width: 1200px;
-    
 
-  
+      justify-content: space-between;
+      align-items: center;
+      // max-width: 1200px;
     }
   }
 
@@ -84,15 +78,21 @@
       align-items: flex-start;
     }
 
-
     @media (min-width: 481px) {
       // display: none;
 
-      margin-right: 315px;
-      align-items:center ;
+      margin-right: 96px;
+      align-items: center;
       justify-content: space-between;
     }
 
+    @media (min-width: 769px) {
+      // display: none;
+
+      margin-right: 315px;
+      align-items: center;
+      justify-content: space-between;
+    }
   }
 
   &__list :visited {
@@ -147,7 +147,6 @@
   }
 
   &__link--active::after {
-    
     position: absolute;
     display: block;
     bottom: 0;
@@ -178,7 +177,7 @@
     display: flex;
     justify-content: space-between;
     list-style: none;
-    
+
     @media (max-width: 480px) {
       // display: none;
       width: 100%;
@@ -186,26 +185,32 @@
       align-items: flex-start;
     }
     @media (min-width: 481px) {
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    @media (min-width: 769px) {
+      flex-direction: row;
       align-items: center;
       width: 333px;
-      
     }
-
-
   }
   &-contacts__item + &-contacts__item {
-
     @media (max-width: 480px) {
       margin-left: 0;
+      margin-top: 0;
     }
-    @media (min-width: 480px) {
+    @media (min-width: 481px) {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+    @media (min-width: 769px) {
+      margin-top: 0;
       margin-left: 30px;
-      //margin-top: 32px;
     }
   }
 
   &-contacts__link {
-    
     @media (max-width: 480px) {
       display: inline-block;
       padding-top: 0;
@@ -215,14 +220,18 @@
     }
     @media (min-width: 481px) {
       display: flex;
+      padding-top: 0;
+      padding-bottom: 0;
+      align-items: center;
+      justify-content: center;
+    }
+    @media (min-width: 769px) {
+      display: flex;
       padding-top: 32px;
       padding-bottom: 32px;
       align-items: center;
       justify-content: center;
-
     }
-
-
   }
   &-contacts__link:hover &-contacts__title,
   &-contacts__link:focus &-contacts__title {
@@ -236,7 +245,7 @@
   &-contacts__link--email {
     margin: 0;
     padding: 0;
-    
+
     @media (max-width: 480px) {
       width: 100%;
       // height: auto;
@@ -245,7 +254,15 @@
       line-height: 1.67;
       letter-spacing: 0.02em;
     }
-    @media (min-width: 480px) {
+    @media (min-width: 481px) {
+      // height: 80px;
+      width: 161px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.14;
+      letter-spacing: 0.02em;
+    }
+    @media (min-width: 769px) {
       height: 80px;
       width: 161px;
       font-weight: 500;
@@ -258,7 +275,7 @@
   &-contacts__link--phone {
     margin: 0;
     padding: 0;
-    
+
     @media (max-width: 480px) {
       width: 100%;
       height: 40px;
@@ -269,7 +286,15 @@
       /* identical to box height */
       letter-spacing: 0.02em;
     }
-    @media (min-width: 480px) {
+    @media (min-width: 481px) {
+      //height: 80px;
+      width: 142px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.14;
+      letter-spacing: 0.02em;
+    }
+    @media (min-width: 769px) {
       height: 80px;
       width: 142px;
       font-weight: 500;
@@ -277,11 +302,9 @@
       line-height: 1.14;
       letter-spacing: 0.02em;
     }
-
   }
 
   &-contacts__icon {
-    
     @media (max-width: 480px) {
       display: none;
     }
@@ -321,9 +344,8 @@
   }
 
   &__logo {
-
     @media (min-width: 481px) {
-      margin-right: 93px;
+      margin-right: 88px;
     }
   }
 
@@ -387,7 +409,6 @@
 }
 
 .menu-container {
-  
   &.is-open {
     display: flex;
     background-color: white;

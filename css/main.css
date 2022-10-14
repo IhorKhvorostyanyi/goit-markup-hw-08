@@ -278,14 +278,10 @@ body {
 }
 .hdr__nav {
   margin: 0 auto;
-}
-@media (max-width: 480px) {
-  .hdr__nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 @media (min-width: 481px) {
   .hdr__nav {
@@ -309,6 +305,13 @@ body {
   }
 }
 @media (min-width: 481px) {
+  .hdr__list {
+    margin-right: 96px;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 769px) {
   .hdr__list {
     margin-right: 315px;
     align-items: center;
@@ -402,6 +405,14 @@ body {
 }
 @media (min-width: 481px) {
   .hdr-contacts {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (min-width: 769px) {
+  .hdr-contacts {
+    flex-direction: row;
     align-items: center;
     width: 333px;
   }
@@ -409,10 +420,18 @@ body {
 @media (max-width: 480px) {
   .hdr-contacts__item + .hdr-contacts__item {
     margin-left: 0;
+    margin-top: 0;
   }
 }
-@media (min-width: 480px) {
+@media (min-width: 481px) {
   .hdr-contacts__item + .hdr-contacts__item {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+@media (min-width: 769px) {
+  .hdr-contacts__item + .hdr-contacts__item {
+    margin-top: 0;
     margin-left: 30px;
   }
 }
@@ -426,6 +445,15 @@ body {
   }
 }
 @media (min-width: 481px) {
+  .hdr-contacts__link {
+    display: flex;
+    padding-top: 0;
+    padding-bottom: 0;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (min-width: 769px) {
   .hdr-contacts__link {
     display: flex;
     padding-top: 32px;
@@ -453,7 +481,16 @@ body {
     letter-spacing: 0.02em;
   }
 }
-@media (min-width: 480px) {
+@media (min-width: 481px) {
+  .hdr-contacts__link--email {
+    width: 161px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  }
+}
+@media (min-width: 769px) {
   .hdr-contacts__link--email {
     height: 80px;
     width: 161px;
@@ -479,7 +516,16 @@ body {
     letter-spacing: 0.02em;
   }
 }
-@media (min-width: 480px) {
+@media (min-width: 481px) {
+  .hdr-contacts__link--phone {
+    width: 142px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  }
+}
+@media (min-width: 769px) {
   .hdr-contacts__link--phone {
     height: 80px;
     width: 142px;
@@ -530,7 +576,7 @@ body {
 }
 @media (min-width: 481px) {
   .hdr__logo {
-    margin-right: 93px;
+    margin-right: 88px;
   }
 }
 .hdr__mobile-shape {
@@ -642,12 +688,12 @@ body {
 }
 @media screen and (min-width: 481px) {
   .hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero (tablet 1)_768_400.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-tablet-1_768_400.jpg");
   }
 }
 @media screen and (min-width: 481px) and (min-device-pixel-ratio: 2), screen and (min-width: 481px) and (min-resolution: 192dpi), screen and (min-width: 481px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero (tablet 2)_1536_800.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-tablet-2-1536_800.jpg");
   }
 }
 @media screen and (min-width: 769px) {
@@ -660,7 +706,7 @@ body {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero (desktop 2)_3200_1200.jpg");
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .hero {
     width: 1600px;
     height: 600px;
