@@ -118,7 +118,7 @@
       margin-top: 32px;
       margin-left: 0;
     }
-    @media (min-width: 481px) {
+    @media (min-width: 768px) {
       margin-left: 50px;
     }
   }
@@ -353,14 +353,14 @@
   }
 
   &__logo {
-    @media (min-width: 481px) {
+    @media (min-width: 768px) {
       margin-right: 88px;
     }
   }
 
   &__mobile-shape {
     margin: 0;
-    
+
     @media (max-width: 767px) {
       width: 100%;
       display: flex;
@@ -373,7 +373,7 @@
     @media (min-width: 768px) {
       display: none;
     }
-    
+
     &__mobile-bottom {
       position: absolute;
       left: 0;
