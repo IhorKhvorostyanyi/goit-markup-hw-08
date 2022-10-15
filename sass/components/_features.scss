@@ -7,51 +7,75 @@
 .description {
   margin-top: 0;
   margin-bottom: 0;
-
-  @media screen and (max-width: 480px) {
-  }
-  @media screen and (min-width: 481px) {
-  }
 }
 .description__list {
   list-style: none;
   margin: 0;
   padding: 0;
 
-  @media screen and (max-width: 480px) {
-    display: block;
-  }
-  @media screen and (min-width: 481px) {
-    display: flex;
-    flex-wrap: wrap;
+     display: grid;
     justify-content: center;
-    // align-items: center;
-  }
-   @media screen and (min-width: 769px) {
-    display: flex;
-    justify-content: center;
-    // align-items: center;
-  }
+    align-content: center;
+
+    @media screen and (max-width: 767px) {
+      grid-template-rows: repeat(4, 270px);
+      grid-row-gap: 30px;
+      grid-column-gap: 30px;
+    }
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: repeat(2, 270px);
+      grid-template-rows: repeat(2, 270px);
+      grid-row-gap: 30px;
+      grid-column-gap: 30px;
+    }
+
+    @media screen and(min-width: 1200px) {
+      grid-template-columns: repeat(4, 270px);
+      grid-template-rows: none;
+      grid-column-gap: 30px;
+      grid-row-gap: 30px;
+    }
+
+
+
+
+
+
+  // @media screen and (max-width: 767px) {
+  //   display: block;
+  // }
+  // @media screen and (min-width: 768px) {
+  //   display: flex;
+  //   flex-wrap: wrap;
+  //   justify-content: center;
+  //   // align-items: center;
+  // }
+  //  @media screen and (min-width: 1200px) {
+  //   display: flex;
+  //   justify-content: center;
+  //   // align-items: center;
+  // }
 }
 .description__item {
   display: block;
   box-sizing: border-box;
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 767px) {
     max-width: 450px;
-    min-width: 200px;
+    // min-width: 200px;
   }
 
-  @media screen and (min-width: 481px) {
+  @media screen and (min-width: 768px) {
     width: 270px;
   }
 }
 .description__item + .description__item {
-  @media screen and (max-width: 480px) {
-    margin-top: 30px;
-  }
-  @media screen and (min-width: 481px) {
-    margin-left: 30px;
-  }
+  // @media screen and (max-width: 1199px) {
+  //   margin-top: 30px;
+  // }
+  // @media screen and (min-width: 1200px) {
+  //   margin-left: 30px;
+  // }
 }
 .description__image {
   margin-top: 0;
@@ -88,7 +112,7 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 767px) {
     text-align: center;
   }
 }

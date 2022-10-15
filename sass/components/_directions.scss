@@ -1,8 +1,21 @@
 /* Directions (of business) section */
 .section__directions {
-  @media screen and (max-width:480px) {
+  @media screen and (max-width: 1199px) {
     display: none;
   }
+
+  display: grid;
+    justify-content: center;
+    align-content: center;
+
+    @media screen and(min-width: 1200px) {
+      grid-template-columns: repeat(3, 370px);
+      grid-template-rows: none;
+      grid-column-gap: 30px;
+      // grid-row-gap: 30px;
+    }
+
+
   padding-top: 0;
   background-color: $bckg-primary;
 }

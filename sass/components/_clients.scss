@@ -10,12 +10,29 @@
     margin-bottom: 0;
     margin-left: auto;
     margin-right: auto;
-    display: flex;
-    flex-wrap: wrap;
-    border: none;
-    align-content: center;
-    justify-content: center;
     list-style: none;
+
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    @media screen and(max-width: 767px) {
+      grid-template-columns: repeat(2, minmax(120px, 210px));
+      grid-template-rows: repeat(3, 92px);
+      grid-row-gap: 30px;
+      grid-column-gap: 30px;
+    }
+    @media screen and(min-width: 768px) {
+      grid-template-columns: repeat(3, 226px);
+      grid-template-rows: repeat(2, 92px);
+      grid-row-gap: 30px;
+      grid-column-gap: 30px;
+    }
+    @media screen and(min-width: 1200px) {
+      grid-template-columns: repeat(6, 170px);
+      //  grid-template-rows: repeat(6, 92px);
+      // grid-row-gap: 30px;
+      grid-column-gap: 30px;
+    }
   }
   &__item {
     padding: 0;
@@ -24,36 +41,36 @@
     border: 0;
     box-shadow: none;
     border-radius: 0;
-    margin-right: 30px;
-    margin-bottom: 30px;
+    // margin-right: 30px;
+    // margin-bottom: 30px;
   }
 
-  &__item + &__item {
-    @media screen and (max-width: 480px) {
-      margin-right: 30px;
-    }
-  }
+  // &__item + &__item {
+  //   @media screen and (max-width: 767px) {
+  //     // margin-right: 30px;
+  //   }
+  // }
 
-  &__item:nth-child(2n) {
-    @media screen and (max-width: 480px) {
-      margin-right: 0;
-    }
-  }
+  // &__item:nth-child(2n) {
+  //   @media screen and (max-width: 767px) {
+  //     margin-right: 0;
+  //   }
+  // }
 
-  &__item:nth-last-child(-n + 2) {
-    @media screen and (max-width: 480px) {
-      margin-bottom: 0;
-    }
-  }
+  // &__item:nth-last-child(-n + 2) {
+  //   @media screen and (max-width: 767px) {
+  //     margin-bottom: 0;
+  //   }
+  // }
   &__link {
-    @media screen and (max-width: 480px) {
-      max-width: 210px;
-      min-width: 150px;
-    }
+    // @media screen and (max-width: 480px) {
+    //   max-width: 210px;
+    //   min-width: 150px;
+    // }
 
-    @media screen and (min-width: 481px) {
-      width: 170px;
-    }
+    // @media screen and (min-width: 481px) {
+    //   width: 170px;
+    // }
 
     display: flex;
     margin: 0;
