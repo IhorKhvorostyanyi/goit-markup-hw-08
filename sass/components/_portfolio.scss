@@ -13,9 +13,36 @@
 .portfolio {
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-wrap: wrap;
   list-style: none;
+
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: 767px) {
+    grid-template-rows: repeat(auto, 450px);
+    grid-template-columns: none;
+    row-gap: 30px;
+    column-gap: 30px;
+  }
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(2, 354px);
+    grid-template-rows: repeat(auto, 1fr);
+    row-gap: 30px;
+    column-gap: 30px;
+  }
+
+  @media screen and(min-width: 1200px) {
+    grid-template-columns: repeat(3, 370px);
+    grid-template-rows: repeat(auto, 1fr);
+    column-gap: 30px;
+    row-gap: 30px;
+  }
+
+  // display: flex;
+  // flex-wrap: wrap;
 
   &__ref {
     display: inline-block;
@@ -31,20 +58,20 @@
   }
 
   &__item {
-    width: calc(
-      (
-          100% -
-            (
-              ($portfolio-gallery-row-count - 1) *
-                $portfolio-gallery-margin-width
-            )
-        ) / $portfolio-gallery-row-count
-    );
-
     padding: 0;
 
-    margin-right: $portfolio-gallery-margin-width;
-    margin-bottom: $portfolio-gallery-margin-width;
+    // width: calc(
+    //   (
+    //       100% -
+    //         (
+    //           ($portfolio-gallery-row-count - 1) *
+    //             $portfolio-gallery-margin-width
+    //         )
+    //     ) / $portfolio-gallery-row-count
+    // );
+
+    // margin-right: $portfolio-gallery-margin-width;
+    // margin-bottom: $portfolio-gallery-margin-width;
   }
 
   &__item:nth-child(3n) {
