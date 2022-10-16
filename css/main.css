@@ -1123,7 +1123,7 @@ body {
 }
 @media screen and (max-width: 767px) {
   .subscribe {
-    width: 381px;
+    max-width: 450px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -1132,7 +1132,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .subscribe {
-    width: 570px;
+    max-width: 450px;
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -1143,13 +1143,12 @@ body {
     width: 570px;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    text-align: center;
   }
 }
 
 .subscribe__mail {
   display: flex;
+  height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
@@ -1157,14 +1156,18 @@ body {
 }
 @media screen and (max-width: 1199px) {
   .subscribe__mail {
+    align-items: center;
     max-width: 450px;
-    height: 50px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .subscribe__mail {
+    max-width: 358px;
   }
 }
 @media screen and (min-width: 1200px) {
   .subscribe__mail {
     width: 358px;
-    height: 50px;
   }
 }
 
@@ -1278,6 +1281,18 @@ body {
     justify-content: center;
   }
 }
+@media screen and (min-width: 768px) {
+  .ftr__first-column {
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1199px) {
+  .ftr__first-column {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
 .ftr__logo {
   margin: 0;
   margin-bottom: 20px;
@@ -1357,7 +1372,8 @@ body {
     margin-left: 70px;
   }
 }
-.ftr__hdr {
+.ftr__title {
+  display: inline-block;
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
@@ -1366,9 +1382,20 @@ body {
   text-transform: uppercase;
   color: #ffffff;
 }
-.ftr ftr__socials {
-  margin-right: auto;
-  margin-left: auto;
+@media screen and (max-width: 1199px) {
+  .ftr__title {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .ftr__title {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .ftr__title {
+    text-align: start;
+  }
 }
 .ftr__socials-link {
   background-color: rgba(255, 255, 255, 0.1);
