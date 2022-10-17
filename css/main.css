@@ -1481,10 +1481,21 @@ body {
 .filter {
   margin: 0;
   padding: 0;
-  display: flex;
   list-style: none;
-  justify-content: center;
   margin-bottom: 50px;
+  display: flex;
+}
+@media screen and (max-width: 767px) {
+  .filter {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+@media screen and (min-width: 768px) {
+  .filter {
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
 }
 .filter__button {
   padding: 0;
